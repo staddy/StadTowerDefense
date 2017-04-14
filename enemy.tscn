@@ -4,7 +4,7 @@
 [ext_resource path="res://images/health.png" type="Texture" id=2]
 [ext_resource path="res://images/monster.png" type="Texture" id=3]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
@@ -25,8 +25,8 @@ tracks/0/keys = { "times":FloatArray( 0, 0.5, 1 ), "transitions":FloatArray( 1, 
 
 transform/pos = Vector2( 1.74339, 0.581131 )
 input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 0.947792, 0, 0, 0.946365, 8.03831, 12.2814 )
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 2.82648, 0, 0, 2.61609, -2.56735, -4.47157 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -53,10 +53,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 15.0
-margin/bottom = 2.0
+margin/left = -25.0
+margin/top = -42.0
+margin/right = 20.0
+margin/bottom = -36.0
 range/min = 0.0
 range/max = 100.0
 range/step = 1.0
@@ -72,7 +72,8 @@ radial_fill/center_offset = Vector2( 0, 0 )
 
 [node name="Sprite" type="Sprite" parent="."]
 
-transform/pos = Vector2( 7.94218, 13.3661 )
+transform/pos = Vector2( -1.57088, -0.665675 )
+transform/scale = Vector2( 3, 3 )
 texture = ExtResource( 3 )
 hframes = 2
 frame = 1
@@ -90,9 +91,9 @@ autoplay = "main"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
-transform/pos = Vector2( 8.03831, 12.2814 )
-transform/scale = Vector2( 0.947792, 0.946365 )
-shape = SubResource( 1 )
+transform/pos = Vector2( -2.56735, -4.47157 )
+transform/scale = Vector2( 2.82648, 2.61609 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 

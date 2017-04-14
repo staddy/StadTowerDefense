@@ -14,3 +14,13 @@ func set_money(value):
 	
 func get_money():
 	return money
+	
+func can_drop_data(pos, data):
+	return true
+
+func drop_data(pos, data):
+	print("drop data")
+	data[1].set_pos(pos)
+	data[1].get_node("RayCast2D").set_rot(data[0].get_node("RayCast2D").get_rot())
+	add_child(data[1])
+	pass
