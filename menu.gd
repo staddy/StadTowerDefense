@@ -11,4 +11,4 @@ func _on_Stop_pressed():
 	
 func _on_Start_pressed():
 	print("_on_Start_pressed")
-	get_tree().change_scene("res://game.tscn")
+	get_tree().change_scene("res://level1.tscn")

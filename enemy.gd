@@ -11,17 +11,20 @@ func _ready():
 	healthBar.set_max(health)
 	healthBar.set_value(health)
 	basicPosY = get_pos().y
-	set_linear_velocity(Vector2(speed, 0))
-	set_fixed_process(true)
 
 func _fixed_process(delta):
 	if health <= 0:
 		queue_free()
+		get_parent().add_money(5)
+		get_parent().get_node("Script").someoneDead()
 	
 	var pos = get_pos()
 	var maxPos = get_parent().get_size().x
 	if (pos.x / maxPos) >= 1.0:
+		# отнять здоровье базы
+		
 		queue_free()
+		get_parent().get_node("Script").someoneDead()
 	
 	var vel = get_linear_velocity()
 	var xVel = vel.x
@@ -34,3 +37,9 @@ func _fixed_process(delta):
 func damage(value):
 	health -= value
 	healthBar.set_value(health)
+
+func wakeUp():
+	set_sleeping(false)
+	set_fixed_process(true)
+	set_gravity_scale(1)
+	set_linear_velocity(Vector2(speed, 0))

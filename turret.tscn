@@ -26,13 +26,13 @@ texture = ExtResource( 2 )
 
 [node name="Barrel" type="Sprite" parent="."]
 
-transform/pos = Vector2( 0.277769, -3.4027 )
+transform/pos = Vector2( -1.8304, -10.7813 )
 transform/scale = Vector2( 3, 3 )
 texture = ExtResource( 3 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 
-transform/pos = Vector2( 0.0142211, -4.98381 )
+transform/pos = Vector2( 1.06831, -10.5177 )
 enabled = true
 cast_to = Vector2( -150, 0 )
 layer_mask = 1
